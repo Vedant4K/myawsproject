@@ -14,7 +14,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://13.53.214.180:3000/users')
+    fetch('http://13.61.155.162:3000/users')
       .then(res => res.json())
       .then(setUsers)
       .catch(console.error);
@@ -37,7 +37,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch('http://13.53.214.180:3000/users', {
+      const res = await fetch('http://13.61.155.162:3000/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
