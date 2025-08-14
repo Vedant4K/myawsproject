@@ -14,7 +14,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://51.20.43.74:3000/users')
+    fetch('http://localhost:3000/users')
       .then(res => res.json())
       .then(setUsers)
       .catch(console.error);
@@ -37,7 +37,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch('http://51.20.43.74:3000/users', {
+      const res = await fetch('http://localhost:3000/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
